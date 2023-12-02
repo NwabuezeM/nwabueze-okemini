@@ -19,20 +19,17 @@ document.addEventListener('click', (e) => {
 });
 
 window.addEventListener('scroll', () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  scrollTop > 600 
-    ? (
-        header.classList.toggle("navbar-scroll"),
-        header.classList.remove("transparent"),
-        hamburger.classList.add("hamburger-scroll"),
-        menuLinks.forEach( (link => link.style.color='gray')),
-        hamburger.classList.remove("hamburger-unscrolled")
-      )
-    : (
-        header.classList.remove("navbar-scroll"),
-        header.classList.add("transparent"),
-        hamburger.classList.remove("hamburger-scroll"),
-        hamburger.classList.add("hamburger-unscrolled"),
-        menuLinks.forEach( (link => link.style.color='#ffffff'))
-      );
-});
+    const header = document.querySelector('.navbar');
+    const hamburger = document.querySelector('.fa-bars');
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+  
+    if (scrollTop > 600) {
+      header.classList.add('navbar-scroll');
+      header.classList.remove('transparent');
+    } else {
+      header.classList.remove('navbar-scroll');
+      header.classList.add('transparent');
+      }
+  });
+
+  

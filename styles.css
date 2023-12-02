@@ -42,7 +42,11 @@ body {
     background-color: #ff6347;
     border-radius: 50px;
     border: none;
-    margin-bottom: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.hero-btn:hover {
+    background-color: #214621;
 }
 
 .hero-btn a {
@@ -78,15 +82,16 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 4rem;
+    margin-bottom: 2rem;
   }
 
   .fa-arrow-right {
     color: #ff6347 !important;
-    font-size: 3rem;
+    font-size: 4rem !important;
   }
 
   .fa-arrow-right:hover {
-    color: green !important;
+    color: #214621 !important;
     transform: scale(1.2);
   }
 
@@ -105,8 +110,37 @@ body {
     margin-bottom: 1rem;
   }
 
+  #services {
+    margin-top: 2rem;
+  }
+
+  #services .row {
+    margin-bottom: 2rem;
+  } 
+
+  @media only screen and (max-width: 1024px) {
+    .hero {
+        margin-top: 2rem;
+    }
+  }
+  
+
 @media only screen and (max-width: 768px) {
     .hero-image {
         display: none;
     }
+
+    .hero {
+        min-height: 80vh;
+    }
 }
+
+@media only screen and (max-width: 500px) {
+    .hero-btn a {
+        font-size: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+} 
