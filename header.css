@@ -1,0 +1,149 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    margin-bottom: -100px;
+  }
+  
+  .transparent {
+    background-color: #020257;
+  }
+  
+  .site-logo {
+    max-width: 20%;
+    margin-left: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.2rem;
+  }
+  
+  .menu li {
+    list-style-type: none;
+    text-transform: uppercase;
+    margin: 0 1rem;
+  }
+  
+  .menu li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .menu li a:hover {
+    color: brown;
+  }
+  
+  .menu li a.active {
+    color: brown;
+  }
+  
+  .fa-bars {
+    display: none;
+  }
+  
+  .fa-times {
+    display: none;
+  }
+  
+  .navbar-scroll {
+    background-color: azure;
+    color: gray;
+    border-bottom: 1px solid gray;
+    box-shadow: 0 5px 10px black;
+  }
+  
+  .hamburger-scroll {
+    background-color: gray;
+    color: #ffffff;
+  }
+
+  .nav-menu button {
+    background-color: #ff6347;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+  }
+
+  .nav-menu button:hover {
+    background-color: #424036;
+    transform: scale(1.2);
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .menu {
+      display: none;
+    }
+  
+    .nav-menu {
+      position: fixed;
+      background-color: white;
+      display: flex;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      padding: 1.2rem;
+      width: 60%;
+      transform: translateX(100%);
+      z-index: 9999;
+    }
+  
+    .show-sidebar {
+      transform: translateX(0);
+    }
+  
+    .menu li {
+      padding: 1rem;
+    }
+    .menu li a {
+        color: gray;
+    }
+  
+    .fa-bars {
+      display: block;
+      position: fixed;
+      top: calc((100px - 1rem) / 2);
+      right: 2rem;
+      font-size: 1.5rem;
+      padding: 6px 8px;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 999;
+    }
+  
+    .hamburger-unscrolled {
+      background-color: aliceblue;
+      color: gray;
+    }
+  
+    .fa-times {
+      display: block;
+      position: fixed;
+      margin-top: 1rem;
+      font-size: 1.5em;
+      background-color: aliceblue;
+      width: fit-content;
+      padding: 6px 8px;
+      color: #ff6347;
+      cursor: pointer;
+      z-index: 9999;
+    }
+  }

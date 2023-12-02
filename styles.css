@@ -1,0 +1,112 @@
+* {
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 0.3s all ease;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #faf8f5;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    background-image: url("https://media.istockphoto.com/id/1433155192/photo/navy-blue-abstract-watercolor-pattern-background-dark-art-background-for-design.webp?b=1&s=170667a&w=0&k=20&c=t83mV-Z1B1MXwTVZpyzABJK-MzaKVUmrXu55-iARNBk=");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+.hero-image {
+    margin-top: 2rem;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    font-weight: 800;
+}
+
+.hero-btn {
+    padding: 0.7rem 1.2rem;
+    background-color: #ff6347;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 1.5rem;
+}
+
+.hero-btn a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: "";
+    flex: 1;
+    border-top: 2px solid #a7a0a0;
+  }
+  
+  .divider-text {
+    padding: 0 10px;
+    background-color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  .what-i-do {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .fa-arrow-right {
+    color: #ff6347 !important;
+    font-size: 3rem;
+  }
+
+  .fa-arrow-right:hover {
+    color: green !important;
+    transform: scale(1.2);
+  }
+
+  #services h3 {
+    font-weight: 700;
+  }
+
+  #services p {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  #services i {
+    font-size: 2.5rem;
+    color: #2585bd;
+    margin-bottom: 1rem;
+  }
+
+@media only screen and (max-width: 768px) {
+    .hero-image {
+        display: none;
+    }
+}
