@@ -419,9 +419,17 @@ body {
         display: none;
     }
 
+    #freelancing p {
+        text-align: left;
+    }
+
     #contact button {
         width: 40%;
     }
+
+    #contact p {
+        font-size: 1.2rem;
+      }
 
 }
 
@@ -433,6 +441,14 @@ body {
     .hero h1 {
         font-size: 1.5rem;
         margin-top: 2rem;
+    }
+
+    .section-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .owl-dots {
+        margin-top: 0.125rem;
     }
 
     #contact button {
