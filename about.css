@@ -145,6 +145,10 @@
     background-color: #180524;
   }
 
+  .accordion-body {
+    background-color: #180524;
+  }
+
   #faqs .accordion-item p {
     font-size: 1.3rem;
     color: #ffffff;
