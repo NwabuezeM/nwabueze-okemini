@@ -142,9 +142,13 @@
   }
   
 
+  .accordion-body {
+    background-color: #180524;
+  }
+
   #faqs .accordion-item p {
     font-size: 1.3rem;
-    color: black;
+    color: #ffffff;
   }
 
   #faqs .accordion-item p a {
