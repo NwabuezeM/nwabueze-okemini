@@ -1,3 +1,4 @@
+//Global variables starts
 const hamburger = document.querySelector('.fa-bars');
 const closeMenu = document.querySelector('.fa-times');
 const sidebar = document.querySelector('.nav-menu');
@@ -5,6 +6,10 @@ const header = document.querySelector('.navbar');
 const menuLinks = document.querySelectorAll('.menu li a');
 const currentYear = document.getElementById('currentYear');
 
+
+//Global variables ends
+
+//Menu icon toggler starts
 hamburger.addEventListener('click', () => {
   sidebar.classList.toggle('show-sidebar');
 });
@@ -13,12 +18,9 @@ closeMenu.addEventListener('click', () => {
   sidebar.classList.remove('show-sidebar');
 });
 
-/*document.addEventListener('click', (e) => {
-  if (e.target !== sidebar && e.target !== hamburger) {
-    sidebar.classList.remove('show-sidebar');
-  }
-}); */
+//Menu icon toggler ends
 
+//Header scoll effects starts
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.navbar');
     const hamburger = document.querySelector('.fa-bars');
@@ -33,12 +35,15 @@ window.addEventListener('scroll', () => {
       }
   });
 
+  //Header scoll effects ends
+
+  //Testimonial carousel starts
   const testimonialsContainer = $('.testimonials-container');
 
 testimonialsContainer.owlCarousel({
   loop: true,
   autoplay: true,
-  autoplayTimeout: 4000,
+  autoplayTimeout: 6000,
   margin: 10,
   nav: true,
   navText: ["<i class='fa-solid fa-arrow-left'></i>", "<i class='fa-solid fa-arrow-right'></i>"],
@@ -65,4 +70,7 @@ testimonialsContainer.on('mouseout', function() {
   testimonialsContainer.trigger('play.owl.autoplay');
 });
 
+//Testimonial carousel ends
+
+//Dynamic date
 currentYear.textContent = new Date().getFullYear();

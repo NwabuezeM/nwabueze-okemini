@@ -1,17 +1,5 @@
-* {
-    font-size: 1.1rem;
-    font-family: 'Times New Roman', Times, serif;
-    transition: 0.3s all ease;
-   }
 
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #faf8f5;
-}
-
+/* Hero section styles starts*/
 .hero {
     min-height: 100vh;
     display: flex;
@@ -57,12 +45,15 @@ body {
     background-color: #214621;
 }
 
-.hero-btn a, #skills button a {
+.hero-btn a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
 }
 
+/* Hero section styles ends*/
+
+/* Services section styles starts*/
 .divider {
     display: flex;
     align-items: center;
@@ -125,6 +116,10 @@ body {
     margin-bottom: 2rem;
   } 
 
+  /* Services section styles ends*/
+
+  /* Skills section styles starts*/
+
   #skills {
     color: white;
     background-image: url("https://media.istockphoto.com/id/157309886/photo/the-wall.webp?b=1&s=170667a&w=0&k=20&c=PA5StrEr8hE1-N8vYk19pyY28ZvIqCQVfsjfSSCRwVs=");
@@ -173,6 +168,16 @@ body {
     border: none;
   }
 
+  #skills button a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Skills section styles ends*/
+
+/* Freelancing section styles starts*/
+
   #freelancing .container {
     padding: 2rem;
     margin-bottom: 2rem;
@@ -187,6 +192,10 @@ body {
     font-weight: 700;
     margin-top: 1rem;
   }
+
+  /* Freelancing section styles ends*/
+
+  /* Testimonial section styles starts*/
 
   #testimonial {
     color: #ffffff;
@@ -343,6 +352,10 @@ body {
     padding: 0.575rem !important;
   }
 
+  /* Testimonial section styles ends*/
+
+  /* Contact section styles starts*/
+
   #contact {
     min-height: 70vh;
     padding: 0 2rem;
@@ -384,6 +397,10 @@ body {
     text-decoration: none;
     color: #ffffff;
   }
+
+  /* Contact section styles ends*/
+
+  /* Media query starts*/
 
   @media only screen and (max-width: 1024px) {
     .hero {
@@ -455,3 +472,5 @@ body {
         width: 60%;
     }
 } 
+
+/* Media query ends*/

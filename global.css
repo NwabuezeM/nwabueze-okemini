@@ -1,3 +1,25 @@
+/* Global styles starts*/
+
+* {
+    font-size: 1.1rem;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 0.3s all ease;
+    scroll-behavior: smooth;
+   }
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #faf8f5;
+}
+
+/* Global styles ends*/
+
+
+/* Site Navigation Header styles starts*/
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -13,7 +35,11 @@
 }
 
 .transparent {
-    background-color: #020257;
+    background-image: url("https://media.istockphoto.com/id/1433155192/photo/navy-blue-abstract-watercolor-pattern-background-dark-art-background-for-design.webp?b=1&s=170667a&w=0&k=20&c=t83mV-Z1B1MXwTVZpyzABJK-MzaKVUmrXu55-iARNBk=");
+    background-repeat: no-repea !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
 }
 
 .site-logo {
@@ -29,6 +55,9 @@
     height: auto;
 }
 
+.active-link {
+    border-bottom: 5px solid red;
+}
 
 .menu {
     display: flex;
@@ -98,6 +127,10 @@
     display: block;
 }
 
+/* Site Navigation Header styles ends*/
+
+
+/* Footer styles starts*/
 footer {
     background-image: url("https://media.istockphoto.com/id/1473470340/photo/black-grey-marble-seamless-glitter-texture-background-counter-top-view-of-tile-stone-floor-in.jpg?s=612x612&w=0&k=20&c=OjK4XEJ5awdXp40DP7rnviVeCKBb-VpVyQKzKbsVoMw=");
     background-repeat: no-repeat;
@@ -158,6 +191,10 @@ footer p {
 footer p:hover {
     color: tomato;
 }
+
+/* Footer styles ends*/
+
+/* Media query starts*/
 
 @media only screen and  (max-width: 1024px) {
     .menu li {
@@ -271,3 +308,5 @@ footer p:hover {
         font-size: 0.8rem;
     }
 }
+
+/* Media query ends*/

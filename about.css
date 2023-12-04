@@ -1,0 +1,299 @@
+.transparent {
+    background-image: url("https://media.istockphoto.com/id/1212558986/photo/dark-wood-texture-background-old-dark-panels.jpg?s=612x612&w=0&k=20&c=zK1CBHxB4LmQBmdk1pKSF00Zg3K5dBt5oUo7QUFhyCk=") !important;
+    background-repeat: no-repea !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    background-size: cover !important;
+}
+
+/* Hero section styles starts*/
+.hero {
+    min-height: 100vh;
+    display: flex;
+    background-image: url("https://media.istockphoto.com/id/1212558986/photo/dark-wood-texture-background-old-dark-panels.jpg?s=612x612&w=0&k=20&c=zK1CBHxB4LmQBmdk1pKSF00Zg3K5dBt5oUo7QUFhyCk=");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    margin-top: 2rem;
+}
+
+.hero-image {
+    margin-top: 3rem;
+}
+
+.introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    font-weight: 800;
+}
+
+.hero h1 {
+    color: #07f107;
+    font-family: 'Black Ops One', cursive ;
+    text-shadow: 0 5px 10px #868484;
+}
+
+.hero-btn{
+    padding: 0.7rem 1.2rem;
+    background-color: #ff6347;
+    border-radius: 50px;
+    border: none;
+    margin-top: 1.5rem;
+}
+
+.hero-btn:hover, #skills button:hover {
+    background-color: #214621;
+}
+
+.hero-btn a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Hero section styles ends*/
+
+/* Background section styles starts*/
+
+#background {
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+#background .container {
+    width: 60%;
+}
+
+#background h2 {
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+#background p {
+    font-size: 1.25rem;
+}
+
+/* Background section styles ends*/
+/* Skills section styles stars*/
+
+#skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background-image: url("https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRhcmslMjBjb2xvcnxlbnwwfHwwfHx8MA%3D%3D");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+    padding: 2rem;
+}
+
+#skills h1 {
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+#skills p, #skills li {
+    font-family: sans-serif;
+    font-size: 1.2rem;
+}
+
+#skills hr {
+    border: none;
+    background-color: aliceblue;
+    width: 3rem;
+    height: 0.3125rem;
+    margin-bottom: 2.5rem;
+  }
+
+  #faqs {
+    padding: 3rem 0 0 0;
+  }
+
+  #faqs h1 {
+    margin: 2rem 0;
+    font-weight: 700;
+  }
+
+  .accordion {
+    --bs-accordion-active-bg: aliceblue;
+    --bs-accordion-active-color: black;
+    --bs-accordion-btn-focus-border-color: red;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #faqs .accordion-item {
+    padding: 0.5rem;
+  }
+
+  #faqs .accordion-header button {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  
+
+  #faqs .accordion-item p {
+    font-size: 1.3rem;
+    color: black;
+  }
+
+  #faqs .accordion-item p a {
+    text-decoration: none;
+    color: blue;
+  }
+
+  #faqs .accordion-item p a:hover {
+    color: brown;
+  }
+
+  .extra-questions {
+    width: 100%;
+    background-color: gray;
+    padding: 1.5rem 0;
+  }
+
+.extra-questions p{
+    color: yellow;
+    font-size: 1.6rem;
+    margin: 0 auto;
+    width: 60%;
+  }
+  
+
+/* Skills faqs styles ends*/
+
+/* Contact section styles starts*/
+
+#contact {
+    min-height: 70vh;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #dae4ec;
+  }
+
+  #contact h2 {
+    font-weight: 700;
+  }
+
+  #contact hr {
+    border: none;
+    background-color: black;
+    width: 3rem;
+    height: 0.3125rem;
+  }
+
+  #contact p {
+    font-size: 1.75rem;
+  }
+
+  #contact button {
+    width: 20%;
+    padding: 0.9rem 1.2rem;
+    background-color: #ff6347;
+    border-radius: 50px;
+    border: none;
+    margin-top: 1.5rem;
+  }
+
+  #contct button:hover {
+    background-color: #214621;
+  }
+
+  #contact button a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+
+  /* Contact section styles ends*/
+
+
+/*Media query starts*/
+
+@media only screen and (max-width: 1024px) {
+    .hero {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-image {
+        display: none;
+    }
+
+    .hero {
+        min-height: 80vh;
+    }
+
+    #background .container {
+        width: 100%;
+    }
+
+    #background p {
+        font-size: 1rem;
+    }
+
+    #skills p, #skills li {
+        font-family: sans-serif;
+        font-size: 1rem;
+    } 
+
+    #faqs {
+        padding: 0;
+    }
+    
+    #faqs h1 {
+        margin: 2rem 0;
+      }
+    .accordion {
+        width: 100%;
+    }
+
+    #faqs .accordion-header button {
+        font-size: 1.3rem;
+    }    
+
+    #faqs .accordion-item p {
+        font-size: 1rem;
+    }    
+
+    .extra-questions p{
+        padding: 0.8rem;
+        font-size: 1.3rem;
+        width: 100%;
+    }
+
+    #contact button {
+        width: 40%;
+    }
+
+    #contact p {
+        font-size: 1.2rem;
+      }
+      #contact button {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .hero-btn a {
+        font-size: 0.8rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+/*Media query ends*/
