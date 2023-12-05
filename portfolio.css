@@ -150,6 +150,9 @@ font-weight: 700;
 /*Media query starts*/
 
 @media only screen and (max-width: 768px) {
+    #hero {
+        min-height: 80vh;
+    }
 
     #hero h1 {
         width: 100%;
@@ -173,4 +176,21 @@ font-weight: 700;
     }
     
 }
+
+
+@media only screen and (max-width: 400px) {
+    .introduction {
+      margin: 4rem 0 2rem 0;
+      padding: 0 0.5rem;
+    }
+  
+    #hero h1 {
+      font-size: 1.3rem;
+    }
+  
+    #hero p {
+      font-size: 1rem;
+    }
+  }
+  
 /*Media query endss*/
