@@ -49,6 +49,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    bottom: 1rem;
 }
 
 .logo {
@@ -211,6 +213,7 @@ footer p:hover {
 
     .site-logo {
         max-width: 50%;
+        right: 1rem;
     }
 
     .nav-menu {
@@ -244,7 +247,7 @@ footer p:hover {
         display: block;
         position: fixed;
         top: calc((100px-1rem) /2 );
-        right: 2rem;
+        right: 1rem;
         font-size: 1.5rem;
         padding: 6px 8px;
         border-radius: 5px;
