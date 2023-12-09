@@ -111,7 +111,7 @@
 
     #hero {
         min-height: 80vh;
-        background-position: top center;
+        background-position: center center;
     }
 
     #hero h1 {

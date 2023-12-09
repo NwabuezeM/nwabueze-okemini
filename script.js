@@ -74,3 +74,4 @@ testimonialsContainer.on('mouseout', function() {
 
 //Dynamic date
 currentYear.textContent = new Date().getFullYear();
+
