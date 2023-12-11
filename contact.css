@@ -160,6 +160,18 @@ form button {
     font-size: 1.2rem;
   }
 
+  .input-row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+
+  .error {
+    color: red;
+    margin-top: -0.5rem;
+    display: none;
+  }
+
 
 @media only screen and (max-width: 768px) {
     .container {
@@ -210,10 +222,6 @@ form button {
         font-size: 0.8rem;
         word-wrap: break-word;
         overflow: visible;
-    }
-
-    input[type="checkbox"] {
-        margin-right: 0.3rem;
     }
 
     .availability p, .availability span {
