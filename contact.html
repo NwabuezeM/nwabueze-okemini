@@ -43,7 +43,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="web-development.html">Web Development</a></li>
                             <li><a href="wordpress.html">Wordpress</a></li>
-                            <li><a href="progressive-web-development.html">PWD</a></li>
+                            <li><a href="progressive-web-application.html">PWA</a></li>
                             <li><a href="blogging.html">Blogging</a></li>
                             <li><a href="website-support.html">Website Support</a></li>
                         </ul>
@@ -84,37 +84,41 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right-hand">
-                        <form  id="contactForm" onsubmit="return formSubmit()">
-                            <div class="input-row">
-                            <label for="name" class="input-area">Your Name</label>
-                             <input type="text" id="name" name="name" placeholder="Enter your name">
-                             <span class="error">Please enter your name</span>
+                        <form action="#" id="contactForm">
+                            <div class="input-field field">
+                              <label for="name">Your Name</label>
+                              <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="off" class="item">
+                              <span class="errorText" id="nameError">Please enter your name</span>
                             </div>
-
-                            <div class="input-row">
-                            <label for="number" class="input-area">Your Phone Number</label>
-                            <input type="tel" id="number" name="number" placeholder="Enter your phone number">
-                            <span class="error">Please enter a valid phone number</span>
+                          
+                            <div class="input-field field">
+                              <label for="number">Your Phone Number</label>
+                              <input type="tel" id="number" name="number" placeholder="Enter your phone number" autocomplete="off" class="item">
+                              <span class="errorText" id="numberError">Please enter your phone number</span>
                             </div>
-
-                            <div class="input-row">
-                            <label for="email" class="input-area">Your Email</label>
-                            <input type="text" id="email" name="email" placeholder="Enter your email">
-                            <span class="error">Please enter a valid email address</span>
+                          
+                            <div class="input-field field">
+                              <label for="email">Your Email</label>
+                              <input type="text" id="email" name="email" placeholder="Enter your email" autocomplete="off" class="item">
+                              <span class="errorText" id="emailError">Please enter your email address</span>
                             </div>
-
-                            <div class="input-row">
-                            <label for="message" class="input-area">Your Enquiry</label>
-                            <textarea name="message" id="message" cols="24" rows="1" placeholder="How can I help you?"></textarea>
-                            <span class="error">Please enter your enquiry message</span>
+                          
+                            <div class="textarea-field field">
+                              <label for="message">Your Enquiry</label>
+                              <textarea name="message" id="message" cols="24" rows="1" placeholder="How can I help you?" autocomplete="off" class="item"></textarea>
+                              <span class="errorText" id="messageError">Please enter your enquiry message</span>
                             </div>
-                            <div class="acceptance input-row">
-                                <label for="acceptance">
-                                    <input type="checkbox" name="acceptance" id="acceptance">I have read and understand your <a href="privacy.html">Privacy Policy</a></label>
-                                    <span class="error" id="acceptanceError"></span>
+                          
+                            <div class="acceptance field">
+                              <label for="acceptance">
+                                <input type="checkbox" name="acceptance" id="acceptance">
+                                I have read and understand your <a href="privacy.html">Privacy Policy</a>
+                              </label>
+                              <span class="errorText" id="acceptanceError">Please accept the privacy policy</span>
                             </div>
+                          
                             <button type="submit">GET STARTED</button>
-                        </form>
+                          </form>
                     </div>
                 </div>
             </div>
@@ -147,7 +151,7 @@
                 <ul>
                     <li><a href="web-development.html">Web Development</a></li>
                     <li><a href="wordpress.html">Wordpress</a></li>
-                    <li><a href="progressive-web-development.html">PWA</a></li>
+                    <li><a href="progressive-web-application.html">PWA</a></li>
                     <li><a href="blogging.html">Blogging</a></li>
                     <li><a href="website-support.html">Website Support</a></li>
                 </ul>
@@ -164,7 +168,17 @@
 
 <!--Bootstrap JS CDN ends-->
 
+                      <!--Jquery CDN starts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                      <!--Jquery CDN ends-->
+      
+                                  <!--Owl Carousel JS CDN starts-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      
+                                      <!--Owl Carousel JS CDN ends-->
+      
 <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
      <!--Custom JS starts-->
 

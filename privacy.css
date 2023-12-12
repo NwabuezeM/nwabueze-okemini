@@ -1,0 +1,82 @@
+main {
+    margin: 7rem auto 2rem auto;
+    width: 70%;
+}
+
+main h1 {
+    font-weight: 700;
+}
+
+main hr {
+        border: none;
+        background-color: black;
+        width: 3rem;
+        height: 0.3125rem;
+        margin-bottom: 2.5rem;    
+}
+
+main h3 {
+    font-weight: 500;
+    margin-bottom: 1.5rem 0;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+main h5 {
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+main .contact {
+    list-style: none;
+}
+
+main a {
+    text-decoration: none;
+}
+
+main a:hover {
+    color: brown;
+    text-decoration: underline;
+}
+
+main .updated {
+    padding-top: 1.5rem;
+    font-style: italic;
+}
+
+.terms-contact {
+    margin-top: 2rem;
+    font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        width: 100%;
+        padding: 0 1.2rem;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    main h3 {
+        font-size: 1.3rem;
+    }
+
+    main h5 {
+        font-size: 1.1rem;
+    }
+
+    main p, main ul li, main a {
+        font-size: 0.9rem;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    main .contact {
+        position: relative;
+        right: 10%;
+    }
+}

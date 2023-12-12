@@ -1,76 +1,144 @@
-const formSubmit = (event) => {
-  event.preventDefault();
-
-  const name = document.getElementById("name");
-  const number = document.getElementById("number");
-  const email = document.getElementById("email");
-  const message = document.getElementById("message");
-  const acceptance = document.getElementById("acceptance");
-  const acceptanceError = document.getElementById("acceptanceError");
-
-  if (name.value.trim() == "") {
-    name.nextElementSibling.style.display = "block";
-    name.style.border = "1px solid red";
-    return false;
-  } else {
-    name.nextElementSibling.style.display = "none";
-    name.style.border = "none";
-  }
-
-  if (!number.value.match(/^(\+\d{1,3}\s?)?(\(\d{1,4}\))?[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/) || number.value.trim() == "") {
-    number.nextElementSibling.style.display = "block";
-    number.style.border = "1px solid red";
-    return false;
-  } else {
-    number.nextElementSibling.style.display = "none";
-    number.style.border = "none";
-  }
-
-  if (!email.value.match(/^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,}$/) || email.value.trim() == "") {
-    email.nextElementSibling.style.display = "block";
-    email.style.border = "1px solid red";
-    return false;
-  } else {
-    email.nextElementSibling.style.display = "none";
-    email.style.border = "none";
-  }
-
-  if (message.value.trim() == "") {
-    message.nextElementSibling.style.display = "block";
-    message.style.border = "1px solid red";
-    return false;
-  } else {
-    message.nextElementSibling.style.display = "none";
-    message.style.border = "none";
-  }
-
-  if (acceptance.checked == false) {
-    acceptanceError.style.display = "block";
-    acceptanceError.innerHTML = "Please accept all terms and conditions";
-    acceptance.style.border = "1px solid red";
-    return false;
-  } else {
-    acceptanceError.style.display = "none";
-    acceptance.style.border = "none";
-  }
-
-  // If all conditions are met, call the enquiryBtn function
-  enquiryBtn();
-};
-
-const enquiryBtn = () => {
-  const name = document.getElementById("name").value;
-  const number = document.getElementById("number").value;
-  const email = document.getElementById("email").value;
-  const enquiry = document.getElementById("message").value;
-
-  const body = `Name: ${name} <br> Number: ${number} <br> Email: ${email} <br> Enquiry: ${enquiry}`;
-
+const form = document.getElementById('contactForm');
+const name = document.getElementById("name");
+const number = document.getElementById("number");
+const email = document.getElementById("email");
+const message = document.getElementById("message");
+const acceptance = document.getElementById("acceptance");
+function sendEmail() {
+  const messageBody = `Name: ${name.value}<br> Number: ${number.value}<br> Email: ${email.value}<br> Enquiry Message: ${message.value}`;
   Email.send({
     SecureToken: "0d6de75b-a407-4b67-a40e-18db3a4173a4",
-    To: "okemininwabueze9@gmail.com",
-    From: "okemininwabueze9@gmail.com",
-    Subject: "Message from the Nwabueze Okemini Contact Form",
-    Body: body,
-  }).then((message) => alert(message));
-};
+    To : 'okemininwabueze9@gmail.com',
+    From : "okemininwabueze9@gmail.com",
+    Subject : "Message from Nwabueze Okemini contact form",
+    Body : messageBody
+}).then(
+  message => {
+    if(message == 'OK') {
+      Swal.fire({
+        title: "Success!",
+        text: "Message was successfully sent and we will get back to you soon",
+        icon: "success"
+      });
+    }
+  }
+);
+}
+
+function checkInputs() {
+  const items = document.querySelectorAll(".item");
+
+  for(const item of items) {
+    if(item.value.trim() == "") {
+      item.classList.add("error");
+      item.parentElement.classList.add("empty");
+    }
+
+    if (items[1].value.trim() == "") {
+      checkNumber();
+    }
+
+    items[1].addEventListener("keyup", () => {
+      checkNumber();
+    })
+
+    item.addEventListener("keyup", () => {
+      if(item.value.trim() != "") {
+        item.classList.remove("error");
+        item.parentElement.classList.remove("empty");
+      }
+      else {
+        item.classList.add("error");
+        item.parentElement.classList.add("empty");
+      }
+    })
+    if (items[2].value.trim() == "") {
+      checkEmail();
+    }
+
+    items[2].addEventListener("keyup", () => {
+      checkEmail();
+    })
+
+    item.addEventListener("keyup", () => {
+      if(item.value.trim() != "") {
+        item.classList.remove("error");
+        item.parentElement.classList.remove("empty");
+      }
+      else {
+        item.classList.add("error");
+        item.parentElement.classList.add("empty");
+      }
+    })
+  }
+}
+
+function checkNumber() {
+  const numberRegEx = /^\+?[\d]{10,14}$/;
+  const numberError = document.getElementById("numberError");
+  if (!number.value.trim().match(numberRegEx)) {
+    number.classList.add("error");
+    number.parentElement.classList.add("empty");
+
+    if (number.value.trim() !== "") {
+      numberError.innerText = "Enter a valid phone number";
+    } else {
+      numberError.innerText = "Enter your phone number";
+    }
+  } else {
+    number.classList.remove("error");
+    number.parentElement.classList.remove("empty");
+  }
+}
+function checkEmail() {
+  const emailRegEx = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+  const emailError = document.getElementById("emailError");
+  if (!email.value.trim().match(emailRegEx)) {
+    email.classList.add("error");
+    email.parentElement.classList.add("empty");
+
+    if (email.value.trim() !== "") {
+      emailError.innerText = "Enter a valid email address";
+    } else {
+      emailError.innerText = "Enter your email address";
+    }
+  } else {
+    email.classList.remove("error");
+    email.parentElement.classList.remove("empty");
+  }
+}
+
+function checkAcceptance() {
+  const acceptance = document.getElementById("acceptance");
+  const acceptanceError = document.getElementById("acceptanceError");
+  const acceptanceBorder = document.querySelector(".acceptance")
+  if (!acceptance.checked) {
+    acceptanceError.style.display = "block";
+    acceptanceBorder.classList.add("acceptance-error");
+  } else {
+    acceptanceError.style.display = "none";
+    acceptanceBorder.classList.remove("acceptance-error");
+  }
+  acceptance.addEventListener("change", () => {
+    if (acceptance.checked) {
+      acceptanceError.style.display = "none";
+      acceptanceBorder.classList.remove("acceptance-error");
+    } else {
+      acceptanceError.style.display = "block";
+      acceptanceBorder.classList.add("acceptance-error");
+    }
+  })
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  checkInputs();
+  checkAcceptance()
+  if (!name.classList.contains("error") && !number.classList.contains("error") && !email.classList.contains("error") && acceptance.checked) {
+    sendEmail();
+
+    form.reset();
+    return false;
+  }
+});

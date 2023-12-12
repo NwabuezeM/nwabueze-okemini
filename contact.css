@@ -78,10 +78,15 @@ hr {
     height: 5.5rem;
 }
 
+.input-field .item.error, .textarea-field .item.error {
+  border: 2px solid red;
+}
+
 .right-hand input:focus, .right-hand textarea:focus {
     background-color: #ffffff;
     border: 6px solid rgba(100, 200, 240, 0.4);
 }
+
 
 .input-area:after {
     content: "*";
@@ -113,6 +118,27 @@ input[type="checkbox"] {
     text-decoration: underline;
 }
 
+.acceptance-error {
+  border: 1px solid red;
+  padding: 1.5rem;
+}
+
+.input-field, .textarea-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.field .errorText {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  display: none;
+}
+
+.field.empty .errorText {
+  display: block;
+}
+
 form button {
     width: 70%;
     padding: 0.8rem 1rem;
@@ -121,6 +147,7 @@ form button {
     border: none;
     color: #ffffff;
     cursor: pointer;
+    margin-top: 2rem;
   }
 
   form button:hover {
@@ -159,20 +186,7 @@ form button {
   .right-hand form select option {
     font-size: 1.2rem;
   }
-
-  .input-row {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
-  }
-
-  .error {
-    color: red;
-    margin-top: -0.5rem;
-    display: none;
-  }
-
-
+  
 @media only screen and (max-width: 768px) {
     .container {
         margin-top: 7rem;
