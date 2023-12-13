@@ -124,12 +124,19 @@ input[type="checkbox"] {
   padding: 1.5rem;
 }
 
-.input-field, .textarea-field {
+.input-field, .textarea-field, .select-field {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
 }
 .field .errorText {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: -0.5rem;
+  display: none;
+}
+
+#deadlineError {
   color: red;
   font-size: 0.8rem;
   margin-top: -0.5rem;
@@ -237,6 +244,14 @@ form button {
         font-size: 0.8rem;
         word-wrap: break-word;
         overflow: visible;
+    }
+
+    #deadline option {
+      width: 100px;
+    }
+
+    #deadline, #deadline option {
+      font-size: 0.9rem;
     }
 
     .availability p, .availability span {

@@ -20,6 +20,12 @@ function sendEmail() {
         text: "Message was successfully sent and we will get back to you soon",
         icon: "success"
       });
+    } else {
+      Swal.fire({
+        title: "Ooops!",
+        text: "An error occured, please try again later",
+        icon: "error"
+      });
     }
   }
 );
