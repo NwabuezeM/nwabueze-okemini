@@ -1,4 +1,4 @@
-//Global variables starts
+// Global variables
 const hamburger = document.querySelector('.fa-bars');
 const closeMenu = document.querySelector('.fa-times');
 const sidebar = document.querySelector('.nav-menu');
@@ -6,39 +6,41 @@ const header = document.querySelector('.navbar');
 const menuLinks = document.querySelectorAll('.menu li a');
 const currentYear = document.getElementById('currentYear');
 
-
-//Global variables ends
-
-//Menu icon toggler starts
+// Menu icon toggler
 hamburger.addEventListener('click', () => {
-  sidebar.classList.toggle('show-sidebar');
+  sidebar.classList.add('show-sidebar');
 });
 
 closeMenu.addEventListener('click', () => {
   sidebar.classList.remove('show-sidebar');
 });
 
-//Menu icon toggler ends
+document.addEventListener('click', (e) => {
+  if (!sidebar.contains(e.target) && e.target !== hamburger) {
+    sidebar.classList.remove('show-sidebar');
+  }
+});
+
 
 //Header scoll effects starts
 window.addEventListener('scroll', () => {
-    const header = document.querySelector('.navbar');
-    const hamburger = document.querySelector('.fa-bars');
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-  
-    if (scrollTop > 600) {
-      header.classList.add('navbar-scroll');
-      header.classList.remove('transparent');
-    } else {
-      header.classList.remove('navbar-scroll');
-      header.classList.add('transparent');
-      }
-  });
+  const header = document.querySelector('.navbar');
+  const hamburger = document.querySelector('.fa-bars');
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  //Header scoll effects ends
+  if (scrollTop > 600) {
+    header.classList.add('navbar-scroll');
+    header.classList.remove('transparent');
+  } else {
+    header.classList.remove('navbar-scroll');
+    header.classList.add('transparent');
+  }
+});
 
-  //Testimonial carousel starts
-  const testimonialsContainer = $('.testimonials-container');
+//Header scoll effects ends
+
+//Testimonial carousel starts
+const testimonialsContainer = $('.testimonials-container');
 
 testimonialsContainer.owlCarousel({
   loop: true,
@@ -62,11 +64,11 @@ testimonialsContainer.owlCarousel({
   }
 });
 
-testimonialsContainer.on('mouseover', function() {
+testimonialsContainer.on('mouseover', function () {
   testimonialsContainer.trigger('stop.owl.autoplay');
 });
 
-testimonialsContainer.on('mouseout', function() {
+testimonialsContainer.on('mouseout', function () {
   testimonialsContainer.trigger('play.owl.autoplay');
 });
 

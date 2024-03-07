@@ -10,34 +10,34 @@ function sendEmail() {
   console.log("clicked");
   Email.send({
     SecureToken: "0d6de75b-a407-4b67-a40e-18db3a4173a4",
-    To : 'okemininwabueze9@gmail.com',
-    From : "okemininwabueze9@gmail.com",
-    Subject : "Message from Nwabueze Okemini Hire me form",
-    Body : messageBody
-}).then(
-  message => {
-    if(message == 'OK') {
-      Swal.fire({
-        title: "Success!",
-        text: "Message was successfully sent and we will get back to you soon",
-        icon: "success"
-      });
-    } else {
-      Swal.fire({
-        title: "Ooops!",
-        text: "An error occured, please try again later",
-        icon: "error"
-      });
+    To: 'okemininwabueze9@gmail.com',
+    From: "okemininwabueze9@gmail.com",
+    Subject: "Message from Nwabueze Okemini Hire me form",
+    Body: messageBody
+  }).then(
+    message => {
+      if (message == 'OK') {
+        Swal.fire({
+          title: "Success!",
+          text: "Message was successfully sent and we will get back to you soon",
+          icon: "success"
+        });
+      } else {
+        Swal.fire({
+          title: "Ooops!",
+          text: "An error occured, please try again later",
+          icon: "error"
+        });
+      }
     }
-  }
-);
+  );
 }
 
 function checkInputs() {
   const items = document.querySelectorAll(".item");
 
-  for(const item of items) {
-    if(item.value.trim() == "") {
+  for (const item of items) {
+    if (item.value.trim() == "") {
       item.classList.add("error");
       item.parentElement.classList.add("empty");
     }
@@ -51,7 +51,7 @@ function checkInputs() {
     })
 
     item.addEventListener("keyup", () => {
-      if(item.value.trim() != "") {
+      if (item.value.trim() != "") {
         item.classList.remove("error");
         item.parentElement.classList.remove("empty");
       }
@@ -69,7 +69,7 @@ function checkInputs() {
     })
 
     item.addEventListener("keyup", () => {
-      if(item.value.trim() != "") {
+      if (item.value.trim() != "") {
         item.classList.remove("error");
         item.parentElement.classList.remove("empty");
       }
